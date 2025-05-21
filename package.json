@@ -1,0 +1,18 @@
+{
+  "name": "new-folder-(18)",
+  "version": "1.0.0",
+  "description": "A decentralized NFT marketplace built with HTML, CSS, JavaScript, and Solidity. This project allows users to mint, list, and trade NFTs using their MetaMask wallet.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.3.0",
+    "dotenv": "^16.5.0",
+    "hardhat": "^2.24.0"
+  }
+}

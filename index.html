@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized NFT Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.2.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-cube"></i>
+            <h1>Decentralized NFT Marketplace</h1>
+        </div>
+        <div class="wallet-info">
+            <button id="connectWallet" class="connect-wallet-btn">
+                <i class="fas fa-wallet"></i>
+                <span>Connect Wallet</span>
+            </button>
+            <div class="wallet-details">
+                <div id="walletAddress" class="wallet-address"></div>
+                <div id="ethBalance" class="eth-balance"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero-section">
+            <h2>Create, Buy, and Sell NFTs</h2>
+            <p>Join the digital art revolution with our decentralized NFT marketplace</p>
+        </div>
+
+        <div class="content-wrapper">
+            <section class="mint-section">
+                <div class="section-header">
+                    <i class="fas fa-plus-circle"></i>
+                    <h2>Create New NFT</h2>
+                </div>
+                <form id="mintForm" class="mint-form">
+                    <div class="form-group">
+                        <label for="nftName">
+                            <i class="fas fa-tag"></i>
+                            NFT Name
+                        </label>
+                        <input type="text" id="nftName" placeholder="Enter NFT name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nftDescription">
+                            <i class="fas fa-align-left"></i>
+                            Description
+                        </label>
+                        <textarea id="nftDescription" placeholder="Describe your NFT" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="nftPrice">
+                            <i class="fas fa-ethereum"></i>
+                            Price (ETH)
+                        </label>
+                        <input type="number" id="nftPrice" step="0.01" placeholder="Enter price in ETH" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nftImage">
+                            <i class="fas fa-image"></i>
+                            Image
+                        </label>
+                        <div class="image-upload">
+                            <input type="file" id="nftImage" accept="image/*" required>
+                            <div id="imagePreview" class="image-preview"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="mint-button">
+                        <i class="fas fa-plus"></i>
+                        Mint NFT
+                    </button>
+                </form>
+            </section>
+
+            <div class="nft-sections">
+                <section class="nft-gallery">
+                    <div class="section-header">
+                        <i class="fas fa-images"></i>
+                        <h2>Your Collection</h2>
+                    </div>
+                    <div id="nftGrid" class="nft-grid"></div>
+                </section>
+
+                <section class="nft-marketplace">
+                    <div class="section-header">
+                        <i class="fas fa-store"></i>
+                        <h2>Marketplace</h2>
+                    </div>
+                    <div id="marketplaceGrid" class="nft-grid"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>A decentralized NFT marketplace built on Ethereum</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NFT Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html> 
